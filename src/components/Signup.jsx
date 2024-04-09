@@ -1,4 +1,4 @@
-export default function Signup() {
+export default function SignUp() {
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -7,6 +7,7 @@ export default function Signup() {
         const data = Object.fromEntries(fd.entries());
         data.acquisition = acquisitionChannel
         console.log(data);
+        e.target.reset();
     }
     return (
         <form onSubmit={handleSubmit}>
